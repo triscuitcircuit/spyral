@@ -55,7 +55,7 @@ def spyral(input, fs, electrodes, n_carriers, spread, **kwargs):
     """
     analysis_lo = kwargs.get('analysis_lo', 120) 
     analysis_hi = kwargs.get('analysis_hi', 8658)
-    analysis_cutoffs = kwargs.get('analysis_cutoffs', None)
+    analysis_cutoffs = kwargs.get('analysis_cutoffs', [])
     carrier_lo = kwargs.get('carrier_lo', 20) 
     carrier_hi = kwargs.get('carrier_hi', 20000) 
     filt_env = kwargs.get('filt_env', 50)
