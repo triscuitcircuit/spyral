@@ -106,4 +106,4 @@ def spyral(input, fs, electrodes, n_carriers, spread, **kwargs):
 
         out += mixed_envelope[i, :] * t_carrier[i, :]             # modulate carriers with mixed envelopes
 #    out = out * 0.05 * np.sqrt(len(out)) / np.linalg.norm(out)    # rms scaled, to avoid saturation
-    return out * (np.sqrt(np.mean(np.square(input))) / np.sqrt(np.mean(np.square(out))))
+    return out * 0.5 * (np.sqrt(np.mean(np.square(input))) / np.sqrt(np.mean(np.square(out))))
